@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import * as todoActions from "../actions/todoList";
+import { renderTime } from '../utils'
 
 class TodoList extends Component {
   constructor(props) {
@@ -21,7 +22,7 @@ class TodoList extends Component {
       <div>
         <ul>
           {this.props.todos.map(todo => (
-            <li key={todo.id}>{todo.text}</li>
+            <li key={todo.id}>{todo.text}{renderTime()}</li>
           ))}
         </ul>
         <input

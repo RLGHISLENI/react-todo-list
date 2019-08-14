@@ -12,3 +12,8 @@ button {
 input {
   border-radius: 5px;
 }
+
+.render-time {
+  color: #CC0000;
+  margin-top: 0;
+}

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Provider } from 'react-redux'
+import * as dateTime from '../utils'
 
 import store from '../stores'
 
@@ -13,6 +14,8 @@ export default function App() {
           <h1>Lista de Tarefas</h1>
           <TodoList />
           <Counter />
+          <h3>{dateTime.renderDate()}</h3>
+          <strong>{dateTime.renderTime()}</strong>
         </div>
       </Provider>
   )
