@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Provider } from 'react-redux'
 
 import store from '../stores'
@@ -6,9 +6,8 @@ import store from '../stores'
 import TodoList from './TodoList'
 import Counter from './Counter'
 
-class App extends Component {
-  render() {
-    return (
+export default function App() {
+  return (
       <Provider store={store}>
         <div className="App">
           <h1>Lista de Tarefas</h1>
@@ -16,8 +15,20 @@ class App extends Component {
           <Counter />
         </div>
       </Provider>
-    )
-  }
+  )
 }
-
-export default App
+//import React, { Component } from 'react'
+// class App extends Component {
+//   render() {
+//     return (
+//       <Provider store={store}>
+//         <div className="App">
+//           <h1>Lista de Tarefas</h1>
+//           <TodoList />
+//           <Counter />
+//         </div>
+//       </Provider>
+//     )
+//   }
+// }
+// export default App
